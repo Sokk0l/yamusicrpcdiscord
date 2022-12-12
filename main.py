@@ -28,7 +28,7 @@ def getToken() -> str:
     config = configparser.ConfigParser()
     config.read('config.ini')
     if config.get('token', 'token') == 'None':
-        token_ = input("[YandexMusicRPC] -> Пожалуйста введите свой логин")
+        token_ = input("[YandexMusicRPC] -> Пожалуйста введите свой токен")
         config.set('token', 'token', token_)
         with open('config.ini', 'w') as f:
             config.write(f)
